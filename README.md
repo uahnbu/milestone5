@@ -70,11 +70,11 @@ module.exports = {
 ```
 * file users-table.js tương tự
 * file index.js cần lưu ý
-  * dùng exports.handler là quy ước của aws lambda để biết sẽ phải chạy hàm này, gần giống export bt v
-  * có 2 statusCode: 200 là request lên server aws successfully, 400 là error
-  * có 4 event là GET và POST để lấy data, PUT để set data (thêm class, user), DELETE để xoá data (xoá class)
-  * vd `${userPath}/{id}` là lấy user với id từ database table "users"
-  * vd `${classPath}/{id}/messages` là lấy tất cả message từ class với id từ database table "classes"
+  * dùng `exports.handler` là quy ước của aws lambda để biết sẽ phải chạy hàm này, gần giống export bt v
+  * có 2 statusCode: `200` là request lên server aws successfully, `400` là error
+  * có 4 event là ***GET*** và ***POST*** để lấy data, ***PUT*** để set data (thêm class, user), ***DELETE*** để xoá data (xoá class)
+  * vd `${userPath}/{id}` là lấy user với id từ database table `"users"`
+  * vd `${classPath}/{id}/messages` là lấy tất cả message từ class với id từ database table `"classes"`
 * ok giờ vào ***e-learning-upload-function***
 ```javascript
 // Create the S3 service object
